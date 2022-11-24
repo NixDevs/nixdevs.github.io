@@ -1,115 +1,150 @@
-body {
-    margin: 100px auto;
-    max-width: 900px;
-    line-height: 1.6;
-    font-size: 30px;
-    padding: 0 10px;
-    font-family: "Inter",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Helvetica,
-        Arial,
-        sans-serif,
-        "Apple Color Emoji",
-        "Segoe UI Emoji";
+:root {
+    --red: #FF0000;
+    --yellow: #ffea29;
+    --black: #1c1c1c;
+}
+/*---Google font---*/
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*---Bases---*/
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body
+{
+  font-family: 'Poppins', sans-serif;
+}
+ul
+{
+  list-style:none;
+}
+a
+{
+  text-decoration:none;
+}
+/*---Header---*/
+.header
+{
+  height:100vh;
+  width:100vw;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njg2MjIwNTY&ixlib=rb-4.0.3&q=80');
+  background-size:cover; 
 }
 
-.smallbar {
-    font-family: -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji";
-}
-a::before {
-    transform: scaleX(0);
-    transform-origin: bottom right;
-}
-a:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-a::before {
-    content: " ";
-    display:block;
+.headerContainer {
+    color: var(--yellow);
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    background: rgb(97, 60, 103);
-    z-index: -1;
-    transition: transform .3s ease;
+    width: 50%;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 35%;
+    margin: -100px 0 0 -150px;
+    font-size: 50px;
+    text-align: center;
+    font-family: fantasy;
 }
 
-#domains {
-    font-size: 14px;
-    background-color: #F1F1F1;
+/*---Navbar---*/
+.navbar
+{
+  position:absolute;
+  width:100%;
+  padding:50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.navbar .logo
+{
+  font-size:2em;
+  font-weight:bold;
+}
+.navbar .nav-links ul
+{
+  display:flex;
+}
+.navbar .nav-links ul li
+{
+  margin:0 25px;
+}
+.navbar .nav-links ul li.active a
+{
+  color:#ed3c57;
+  font-weight:600;
+}
+.navbar a 
+{
+  color:white;
+}
+.navbar .menu-hamburger
+{
+  display:none;
+  color:white;
+  position:absolute;
+  top:50px;
+  right:50px;
+  font-size:35px;
+  cursor:pointer;
 }
 
-a {
-    position: relative;
-    color: #744684;
-    text-decoration: none;
+@media screen and (max-width:900px)
+{
+  .navbar
+  {
+    padding:0;
+  }
+  .navbar .logo
+  {
+    display:none;
+  }
+  .navbar .menu-hamburger
+  {
+    display:block;
+  }
+  .nav-links
+  {
+    top:0;
+    left:-100%;
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgba(0,0,0,0.5);
+    backdrop-filter:blur(8px);
+    width:100%;
+    height:100vh;
+    transition: left 0.5s ease;
+    
+  }
+  .nav-links.mobile-menu
+  {
+  left:0;
+    
+  }
+
+  .nav-links ul
+  {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .navbar .nav-links ul li
+  {
+  margin:25px 0;
+  font-size:1.2em;
+  }
+  .menu-hamburger
+  {
+    display:block;
+  }
 }
-
-a:hover {
-    color:#a04aa1;
+/* -- typewriter --*/
+.fade-in-text {
+    animation: fadeIn 5s;
 }
-
-h1, h2, h3 {
-    line-height: 1;
-}
-
-.arlplayz {
-    position: relative;
-    color: #d164fc;
-}
-.title {
-    position: relative;
-    color: #d164fc;
-}
-
-
-ul {
-    list-style-type: none;
-    margin-top: 0px;
-}
-
-p {
-    margin-bottom: 9px;
-
-}
-
-li::before {
-    content: "- ";
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #262626;
-        color: white;
-    }
-    #domains {
-        background-color: #2b2b2b;
-        word-wrap: break-word;
-    }
-    a {
-        color: #3391ff;
-    }
-}
-
-/* inter-regular - latin */
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    unicode-range: U+0-7C,U+7D-FFFF;
-    src: local(''),
-            url('fonts/inter-v8-latin-regular.woff2') format('woff2') /* Chrome 26+, Opera 23+, Firefox 39+ */
-}
-
-
-  
