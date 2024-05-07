@@ -8,9 +8,7 @@ body {
   background-color: #1B1F23;
   color: #1B1F23;
 }
-.mobile {
-  display: none;
-}
+
 /*
 .mobile {
   margin: auto;
@@ -23,16 +21,18 @@ body {
 }
 */
 
-
-
 .foot {
   display: flex;
   align-items: center;
   justify-content: center;
   
 }
-
 a {
+  text-decoration: none;
+  color: azure;
+}
+
+.footLink {
   text-decoration: none;
   margin-right: 20px;
 }
@@ -40,6 +40,7 @@ a {
   text-align: center;
   font-family: 'UbuntuSansMono';
   color: azure;
+  line-height: 1.1;
 }
 .tubelight {
   margin: auto;
@@ -139,6 +140,40 @@ a {
   height: 50px;
 }
 
+
+.flex-container {
+  justify-content: space-between;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  height: 10%;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "UbuntuSansMono";
+}
+.card img {
+  margin: auto;
+  display: block;
+  float: left;
+  padding-top: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  color: azure;
+}
+.container p {
+  font-size: 20px;
+}
+
+
 @media only screen and (max-width: 767px) {
   body {
     font-size: 15px;
@@ -151,5 +186,10 @@ a {
     width: 50px;
     height: 50px;
   }
-
+  .container {
+    display:block;
+  }
+  .container p {
+    font-size: 12px;
+  }
 }
