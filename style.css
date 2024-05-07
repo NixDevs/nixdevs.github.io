@@ -9,18 +9,6 @@ body {
   color: #1B1F23;
 }
 
-/*
-.mobile {
-  margin: auto;
-  margin-top: 200px;
-  color: beige;
-  align-items: center;
-  justify-content: center;
-  display: none; 
-  font-family: "UbuntuSansMono";
-}
-*/
-
 .foot {
   display: flex;
   align-items: center;
