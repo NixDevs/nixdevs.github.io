@@ -4,7 +4,7 @@ body {
   max-width: 600px;
   line-height: 1.1;
   font-size: 30px;
-  font-family:sans-serif;
+  font-family: sans-serif;
   background-color: #1B1F23;
   color: #1B1F23;
 }
@@ -13,8 +13,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
+
 a {
   text-decoration: none;
   color: azure;
@@ -24,12 +24,14 @@ a {
   text-decoration: none;
   margin-right: 20px;
 }
+
 .bio {
   text-align: center;
   font-family: 'UbuntuSansMono';
   color: azure;
   line-height: 1.1;
 }
+
 .tubelight {
   margin: auto;
   /*
@@ -48,16 +50,18 @@ a {
   list-style: none;
   font-family: 'Jersey';
   font-size: 5em;
-  letter-spacing:15px;
+  letter-spacing: 15px;
   text-shadow: none;
   animation: animate 1s 2 linear;
 
 }
+
 @keyframes animate {
   0% {
     color: #a7a300;
     text-shadow: none;
   }
+
   18% {
     color: #a7a300;
     text-shadow: none;
@@ -67,51 +71,64 @@ a {
     color: #fff900;
     text-shadow: 0 0 7px #fff000, 0 0 20px #ff6c00;
   }
+
   30% {
     color: #a7a300;
     text-shadow: none;
   }
+
   35% {
     color: #fff900;
     text-shadow: 0 0 7px #fff000, 0 0 20px #ff6c00;
   }
+
   70% {
     color: #a7a300;
     text-shadow: none;
   }
+
   85% {
     color: #a7a300;
     text-shadow: none;
   }
+
   90% {
     color: #a7a300;
     text-shadow: none;
   }
+
   100% {
     color: #a7a300;
     text-shadow: none;
   }
 
 }
-.tubelight li:nth-child(1){
+
+.tubelight li:nth-child(1) {
   animation-delay: .2s;
 }
-.tubelight li:nth-child(2){
+
+.tubelight li:nth-child(2) {
   animation-delay: .4s;
 }
-.tubelight li:nth-child(3){
+
+.tubelight li:nth-child(3) {
   animation-delay: .6s;
 }
-.tubelight li:nth-child(4){
+
+.tubelight li:nth-child(4) {
   animation-delay: .8s;
 }
-.tubelight li:nth-child(5){
+
+.tubelight li:nth-child(5) {
   animation-delay: 1.2s;
 }
-.tubelight li:nth-child(6){
+
+.tubelight li:nth-child(6) {
   animation-delay: 1.4s;
 }
-.tubelight li:nth-child(7){
+
+.tubelight li:nth-child(7) {
   animation-delay: 1.6s;
 }
 
@@ -119,15 +136,21 @@ a {
   font-family: 'Jersey';
   src: URL('fonts/Jersey20-Regular.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'UbuntuSansMono';
   src: URL('fonts/UbuntuSansMono-VariableFont_wght.ttf') format('truetype');
 }
+
 .image {
   width: 50px;
   height: 50px;
 }
 
+.image:hover {
+  transform: scale(1.1);
+  transition: ease-out 0.1s;
+}
 
 .flex-container {
   justify-content: space-between;
@@ -143,6 +166,7 @@ a {
   text-align: center;
   font-family: "UbuntuSansMono";
 }
+
 .card img {
   margin: auto;
   display: block;
@@ -151,13 +175,17 @@ a {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+  transition: 0.2s;
+
 }
 
 .container {
   padding: 2px 16px;
   color: azure;
 }
+
 .container p {
   font-size: 20px;
 }
@@ -171,13 +199,16 @@ a {
     align-items: center;
     line-height: 4;
   }
+
   .image {
     width: 50px;
     height: 50px;
   }
+
   .container {
-    display:block;
+    display: block;
   }
+
   .container p {
     font-size: 12px;
   }
